@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{ product.name}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+
+    <div >
+        <div *ngFor="let a of product.attributes" >
+            <div class="row" style="padding-bottom: 0.8em; padding-top:0.8em">
+                <div class="col-sm-3" style="font-weight: bold;">
+                    {{ a.key}}
+                </div>
+                <div class="col-sm-9">
+                    {{ a.value}}
+                </div>
+        </div>
+    </div> 
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="close()">Close</button>
+</div>

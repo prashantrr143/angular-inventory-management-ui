@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{product.description}}</h6>
+      <p class="card-text">{{product.longDescription}}</p>
+      <p> <ngb-rating [(rate)]="product.rating" [readonly]="true"></ngb-rating></p>
+      <button class="btn btn-primary float-left" (click) = openDetailsModal($event,product.productId)>Details</button> 
+      <button class="btn btn-success float-right" (click) = openAddReviewPanel($event,product.productId)><span>+</span>Add Review</button>
+    </div>
+</div>
